@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+	<bean id="downTaskDao" className="me.softneo.task.down.dao.DownTaskDao">
+	</bean>
+	
+	<bean id="downTaskService" className="me.softneo.task.down.service.DownTaskService">
+		<property name="downTaskDao" ref="downTaskDao" />
+	</bean> 
+</beans>

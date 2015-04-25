@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<!-- 4大参数配置 -->
+		<property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+		<property name="jdbcUrl">jdbc:oracle:thin:@202.202.202.247:1521/orcl</property>
+		<property name="user">sftlmis_ys</property>
+		<property name="password">sftlmis</property>
+		<!-- 连接池配置 -->
+		<property name="initialPoolSize">10</property>
+		<property name="maxIdleTime">30</property>
+		<property name="maxPoolSize">100</property>
+		<property name="minPoolSize">3</property>
+		<property name="acquireIncrement">3</property>
+		<property name="checkoutTimeout">10000</property>
+	</default-config>
+
+	<!-- 命名配置，可以在创建c3p0时指定连接的数据库 -->
+	<named-config name="mysql">
+		<property name="user">root</property>
+		<property name="password">java</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/jdbc</property>
+
+		<property name="initialPoolSize">10</property>
+		<property name="maxIdleTime">30</property>
+		<property name="maxPoolSize">100</property>
+		<property name="minPoolSize">10</property>
+	</named-config>
+</c3p0-config> 
